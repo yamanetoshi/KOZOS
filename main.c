@@ -4,12 +4,15 @@
 
 int main(void)
 {
-	serial_init(SERIAL_DEFAULT_DEVICE);
+  serial_init(SERIAL_DEFAULT_DEVICE);
 
-	puts("Hello World!\n");
+  puts("Hello World!\n");
 
-	while(1)
-		;
+  putxval(0x10, 0);   puts("\n");
+  putxval(0xffff, 0); puts("\n");
 
-	return 0;
+  while (1)
+    ;
+
+  return 0;
 }
